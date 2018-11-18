@@ -3,6 +3,7 @@ from sys import argv
 import bottle
 from bottle import *
 import pymysql.cursors
+from user.sql import *
 
 bottle.debug(True)
 
