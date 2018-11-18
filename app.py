@@ -18,14 +18,14 @@ def index():
     try:
         with connection.cursor() as cursor:
             # Create a new record
-            sql = "INSERT INTO `user` (`name`) VALUES (%s)"
-            cursor.execute(sql, ('Admin', 'Daníel Daníelsson'))
+            sql = "INSERT INTO `user` (`user`, `pass`) VALUES (%s, %s)"
+            cursor.execute(sql, ('andri', '5678'))
 
         connection.commit()
 
         with connection.cursor() as cursor:
-            sql = "SELECT `user`, `pass` FROM `user` WHERE `name`=%s"
-            cursor.execute(sql, ('webmaster@python.org',))
+            sql = "SELECT `user`, `pass` FROM `user` WHERE `user`=%s"
+            cursor.execute(sql, ('andri',))
             result = cursor.fetchone()
             print(result)
     finally:
