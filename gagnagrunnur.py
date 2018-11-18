@@ -8,7 +8,7 @@ bottle.debug(True)
 
 @get('/')
 def index():
-    connection = pymysql.connect(host='localhost',
+    connection = pymysql.connect(host='0106952799_verk7@localhost',
                                  user='user',
                                  password='passwd',
                                  db='db',
