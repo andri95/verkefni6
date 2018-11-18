@@ -25,7 +25,7 @@ def index():
 
         with connection.cursor() as cursor:
             sql = "SELECT `user`, `pass` FROM `user` WHERE `user`=%s"
-            cursor.execute(sql, ('andri',))
+            cursor.execute(sql, ('andri'))
             result = cursor.fetchone()
             print(result)
     finally:
